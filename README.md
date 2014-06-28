@@ -2,7 +2,7 @@ Tomcat Principle Provider Valve
 ===============================
 Provides the ability to run your tomcat web app utilising container managed security on the your developer workstation without having to configure, provide or deal with authentcation.
 
-This deals with the case where you have a tomcat web app with a web.xml with something like the following:
+This deals with the case where you have a tomcat web app with a web.xml containing something like the following:
 
     ...
     <security-constraint>
