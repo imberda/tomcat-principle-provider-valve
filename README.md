@@ -25,7 +25,7 @@ This deals with the case where you have a tomcat web app with a web.xml containi
     
 Here notice that the element "\<login-config\>" is conspicuous by its absence. This means that although the web app expects the servlet container to police access to its resources its not saying how authentication should be performed. This is most commonly used in situations where custom authentication (i.e. not form based or basic auth) are being used.
 
-If you have the above configuration in your webapp's web.xml and you access "/test.html" Tomcat will return you a "403 Forbidden" response code. This is because if neither knows who you are or what roles you are in. To get around this (in development!) you can add the following into the Tomcat "server.xml" file:
+If you have the above configuration in your webapp's web.xml and you access "/test.html" Tomcat will return you a "403 Forbidden" response code. This is because it neither knows who you are or what roles you are in. To get around this (in development!) you can add the following into the Tomcat "server.xml" file:
 
     <Valve className="com.imberda.PrincipleProviderValve" userName="john_doe" roles="role_abc,role_123"/>
 
