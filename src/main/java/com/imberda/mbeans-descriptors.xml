@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<mbeans-descriptors>
+
+  <mbean name="PrincipleProviderValve"
+         description="Value to set the Principle so that container manager security can be used without a real authentication system"
+         domain="Catalina"
+         group="Valve"
+         type="com.imberda.PrincipleProviderValve">
+
+    <attribute name="asyncSupported"
+               description="Does this valve support async reporting."
+               is="true"
+               type="boolean"/>
+
+    <attribute name="buffered"
+               description="Flag to buffering."
+               is="true"
+               type="boolean"/>
+
+    <attribute name="checkExists"
+               description="Check for file existence before logging."
+               is="true"
+               type="boolean"/>
+
+    <attribute name="className"
+               description="Fully qualified class name of the managed object"
+               type="java.lang.String"
+               writeable="false"/>
+
+    <attribute name="condition"
+               description="The value to look for conditional logging. The same as conditionUnless."
+               type="java.lang.String"/>
+
+    <attribute name="conditionIf"
+               description="The value to look for conditional logging."
+               type="java.lang.String"/>
+
+    <attribute name="conditionUnless"
+               description="The value to look for conditional logging."
+               type="java.lang.String"/>
+
+    <attribute name="directory"
+               description="The directory in which log files are created"
+               type="java.lang.String"/>
+
+    <attribute name="enabled"
+               description="Enable Access Logging"
+               is="false"
+               type="boolean"/>
+
+    <attribute name="encoding"
+               description="Character set used to write the log file"
+               type="java.lang.String"/>
+
+    <attribute name="fileDateFormat"
+               description="The format for the date for date based log rotation"
+               type="java.lang.String"/>
+
+    <attribute name="info"
+               description="Information about this implementation"
+               type="java.lang.String"
+               writeable="false"/>
+
+    <attribute name="locale"
+               description="The locale used to format timestamps in the access log lines"
+               type="java.lang.String"/>
+
+    <attribute name="pattern"
+               description="The pattern used to format our access log lines"
+               type="java.lang.String"/>
+
+    <attribute name="prefix"
+               description="The prefix that is added to log file filenames"
+               type="java.lang.String"/>
+
+    <attribute name="resolveHosts"
+               description="Resolve hosts"
+               is="true"
+               type="boolean"/>
+
+    <attribute name="rotatable"
+               description="Flag to indicate automatic log rotation."
+               is="true"
+               type="boolean"/>
+
+    <attribute name="renameOnRotate"
+               description="Flag to defer inclusion of the date stamp in the log file name until rotation."
+               is="true"
+               type="boolean"/>
+
+    <attribute name="stateName"
+               description="The name of the LifecycleState that this component is currently in"
+               type="java.lang.String"
+               writeable="false"/>
+
+    <attribute name="suffix"
+               description="The suffix that is added to log file filenames"
+               type="java.lang.String"/>
+
+    <operation name="rotate"
+               description="Check if the log file is due to be rotated and rotate if it is"
+               impact="ACTION"
+               returnType="void">
+    </operation>
+
+    <operation name="rotate"
+               description="Move the existing log file to a new name"
+               impact="ACTION"
+               returnType="boolean">
+      <parameter name="newFileName"
+                 description="File name to move the log file to."
+                 type="java.lang.String"/>
+    </operation>
+
+  </mbean>
+</mbeans-descriptors>
