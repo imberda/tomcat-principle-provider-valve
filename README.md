@@ -29,7 +29,7 @@ If you have the above configuration in your webapp's web.xml and you access "/te
 
     <Valve className="com.imberda.PrincipleProviderValve" userName="john_doe" roles="role_abc,role_123"/>
 
-In effect this will create a "Principle" in the request context and set the username to "john_doe" and set the roles "role_abc"  and role_123". The "userName" and "roles" can be set as XML attributes as shown above or can be set as JVM system properties (using "principle.provider.username" and "principle.provider.roles" respectively - note that if both system property and XML attributes are both set, then the system property take precedence).
+In effect this will create a "Principle" in the request context and set the username to "john_doe" and set the roles "role_abc"  and role_123". The "userName" and "roles" can be set as XML attributes as shown above or can be set as JVM system properties (using "principle.provider.username" and "principle.provider.roles". Note that if both system properties and XML attributes are both set, the system properties take precedence).
 
 **You also need to build this project into a Jar file and place it into your Tomcat "lib" directory and restart Tomcat for the changes to take effect.**
 
